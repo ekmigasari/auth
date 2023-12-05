@@ -9,9 +9,18 @@ export const Login = () => {
 
   return (
     <main className="space-y-3">
-      <Input placeholder="email@domain.com" onChange={handleChange} />
-      <Input placeholder="Password" onChange={handleChange} />
-      <Button color="primary" onClick={handleSubmitLogin}>
+      <Input
+        name="email"
+        placeholder="email@domain.com"
+        onChange={handleChange}
+      />
+      <Input
+        name="password"
+        type="password"
+        placeholder="Password"
+        onChange={handleChange}
+      />
+      <Button isDisabled={loading} color="primary" onClick={handleSubmitLogin}>
         Login
       </Button>
       <div className="flex gap-1">
